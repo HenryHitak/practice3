@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>
+
+    </h2>
+    <ul>
+
+    </ul>
+    <table>
+        <tr>
+            <th></th>
+            <td></td>
+            <td></td>
+
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <th></th>
+            <td></td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <th></th>
+            <td></td>
+        </tr>
+    </table>
+</body>
+<script>
+    // let broadcasting = {
+    //     Device: "mobile",
+    //     OS: "ios",
+    //     Program: "Twitch",
+    //     dataType: "4G/lte",
+    //     IP:"10.0.1.148",
+    //     Language:"Kor",
+    //     Country:"Canada",
+    //     viewerCount:"190"
+    // }
+    function gym (price,location,country,name,salary){
+        this.price = price;
+        this.location = location;
+        this.country=country;
+        this.name = name;
+        this.salary = salary;
+        this.displayInfo=function(){
+            return "Gym Price: " + this.price + " || "+ "Location: " + this.location + " || "+"Country: " + this.Country + " || "+"Name: " + this.name + " || "+"Salary: " + this.salary;}
+    }
+    let googgle = new gym("$20","KX","UK","Googgle","5000");
+    let brentwood = new gym("$40","Tottenham","UK","Son","$50000");
+    console.log(brentwood.displayInfo());//by using . can call properties
+    console.log(googgle);
+    // let gym = {
+    //     price:"$20",
+    //     location:"Waterfront",
+    //     Country:"Canada",
+    //     name:"Station",
+    //     bathroom:"6",
+    //     shifts:["Morning","Evening"],
+    //     certificates:{
+    //     certificate1:"UBC",
+    //     certificate2:"Tamwood",
+    //     certificate3:"Douglas"
+    // },
+    //     displayInfo:function(){
+    //         return "Gym Price: " + this.price + " || "+ "Location: " + this.location + " || "+"Country: " + this.Country + " || "+"Name: " + this.name + " || "+ "Bathroom: " + this.bathroom +" || "+"Shifts: " + this.shifts[0]+" || "+ "Certificates: " + this.certificates.certificate1;}
+    // };
+    // document.getElementsByTagName('h2')[0].innerHTML = gym.displayInfo();
+    // certificates:{
+    //     certificate1:"UBC",
+    //     certificate2:"Tamwood",
+    //     certificate3:"Douglas"
+    // },
+    // shifts:["Morning","Evening"]
+    // document.write(gym.shifts[1]);
+
+    //     document.getElementsByTagName("table")[0].innerHTML = "<tr><th>" + "Price"+":"+"</th><td>"+gym.price+"</td></tr>";
+    //     document.getElementsByTagName("table")[1].innerHTML = "<tr><th>" + "Location"+":"+"</th><td>"+gym.location+"</td></tr>";
+    //     document.getElementsByTagName("table")[2].innerHTML = "<tr><th>" + "Country"+":"+"</th><td>"+gym.Country+"</td></tr>";
+    // for(var key in gym){
+    //     console.log(key+":"+gym[key]);
+        
+    //     document.getElementsByTagName('ul')[0].innerHTML += "<li>"+key + ":"+gym[key]+"||"+"</li>";//use "" for tags to include value to it.***
+
+    // }
+</script>
+</html>

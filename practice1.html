@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // function student (firstName, lastName, program, courses, grades, gender, age,shifts){
+    //     this.firstName = firstName;
+    //     this.lastName = lastName;
+    //     this.program = program;
+    //     this.courses = courses;
+    //     this.grades = grades;
+    //     this.gender = gender;
+    //     this.age = age;
+    //     this.shifts = shifts;
+    //     this.displayInfo = function() {
+    //         return "First Name: " + firstName + " || " + "Last Name: " + lastName + " || " + "Program: " + program + " || " + "Courses: " + courses + " || " + "Grades: " + grades+ " || " + "Gender: " + gender + " || " + "Age: " + age;
+    //     };
+    function student (firstname, lastname, program, courses, grades){
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.program = program;
+        this.courses = courses;
+        this.grades = grades;
+        this.CalculateAvg = function (){
+            let sum = 0;
+            for(let i=0; i<this.grades.length; i++){
+                sum += this.grades[i];
+            }
+            return sum/this.grades.length;
+        }
+        this.FindMax = function() {
+            let max = 0;
+            for(let grade of this.grades){
+                if(max<grade){
+                    max =grade;
+                }
+            }
+            return max;
+        }
+        this.FindMin = function() {
+            let min = 100;
+            for(let grade of this.grades){
+            if (min>grade){
+                min=grade;
+            }
+        }
+        return min;
+    }
+}
+    let miho = new student("Miho", "Yoshino", "Web Dev", ["HTML","CSS","JS"], [75,80,90]);
+    console.log(miho.CalculateAvg());
+    console.log(miho.FindMax());
+    console.log(miho.FindMin());
+            // this.maxmin = function() {
+                //     var maxMark=0;
+                //     var minMark=100;
+                //     var maxStud="";
+                //     var minStud="";
+                //     for (var studentName in new student){
+                    //     if(maxMark<new student[studentName]){
+                        //         maxMark=new student[studentName];
+                        //         maxStud=studentName;
+                        //     }
+                        //     if(minMark>new student[studentName]){
+        //         minMark=new student[studentName];
+        //         minStud=studentName;
+        //     }
+        // }
+    // let miho = new student("Miho", "Yoshino", "Web Dev", "Web", "90")
+    
+    //     this.maxmin = function() {
+        //         var maxMark=0;
+        //         var minMark=100;
+        //         var maxStud="";
+        //         var minStud="";
+        //         for (var studentName in new student){
+    //         if(maxMark<new student[studentName]){
+        //             maxMark=new student[studentName];
+        //             maxStud=studentName;
+        //         }
+        //         if(minMark>new student[studentName]){
+    //             minMark=new student[studentName];
+    //             minStud=studentName;
+    //         }
+    //     }
+    // }
+    //     // this.calculateSalary=function() {
+        //     //     let additional = 0;
+        //     //     switch(this.position){
+            //     //         case "Javascript":additional= 10;
+    //     //         break;
+    //     //         case "Web Dev":additional=5;
+    //     //         break;
+    //     //         case "Lee":additional=15;
+    //     //         break;
+    //     //     }
+    //     //     this.salary = this.salary + (this.salary*(additional/100));
+    //     // }
+    // }
+    // // let jose = new student("Jose","Kim","Web Dev","Javascript",90,"Male",25,"morning");
+    // // jose.calculateSalary();
+    // let max = new student("Matheus","Lee","Web Dev","Javascript",90,"Male",23,["morning","evening"]);
+    // let juan = new student("juan","kim","Web Dev","Javascript",80,"Male",23,["morning","evening"]);
+    // let jose = new student("jose","choi","Web Dev","Javascript",70,"Male",23,["morning","evening"]);
+    // // max.grades.push(70);
+    // // max.shifts.push("dawn");
+    // // console.log(jose);
+    // document.getElementById("maximum").innerHTML = "Maximum is: "+max;
+    // document.getElementById("minimum").innerHTML = "Minimum is: "+min;
+    // console.log()
+    // console.log(max.displayInfo());
+    // document.write(max.displayInfo());
+</script>
+</html>
