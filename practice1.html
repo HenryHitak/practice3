@@ -7,7 +7,9 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <h2></h2>
+    <h2></h2>
+    <h2></h2>
 </body>
 <script>
     // function student (firstName, lastName, program, courses, grades, gender, age,shifts){
@@ -32,6 +34,7 @@
             let sum = 0;
             for(let i=0; i<this.grades.length; i++){
                 sum += this.grades[i];
+                // sum = sum + this.grades[i];
             }
             return sum/this.grades.length;
         }
@@ -55,9 +58,11 @@
     }
 }
     let miho = new student("Miho", "Yoshino", "Web Dev", ["HTML","CSS","JS"], [75,80,90]);
-    console.log(miho.CalculateAvg());
-    console.log(miho.FindMax());
-    console.log(miho.FindMin());
+    document.getElementsByTagName('h2')[0].innerHTML = miho.CalculateAvg();
+    document.getElementsByTagName('h2')[1].innerHTML = miho.FindMax();
+    document.getElementsByTagName('h2')[2].innerHTML = miho.FindMin();
+    // console.log(miho.FindMax());
+    // console.log(miho.FindMin());
             // this.maxmin = function() {
                 //     var maxMark=0;
                 //     var minMark=100;
